@@ -1,0 +1,82 @@
+﻿@model IEnumerable<CSharpMVC_BuildingAndConferenceRoomAppAssignment.ViewModels.ViewBuildingInformationViewModel>
+
+@{
+    ViewBag.Title = "ViewBuildingInformation";
+}
+
+<h2>Building Information</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainBuildingPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfFloors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfConferenceRooms)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainBuildingPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfFloors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfConferenceRooms)
+        </td>      
+    </tr>
+}
+</table>
+
+<div>
+    @Html.ActionLink("Main Menu", "Index", "Home")
+</div>

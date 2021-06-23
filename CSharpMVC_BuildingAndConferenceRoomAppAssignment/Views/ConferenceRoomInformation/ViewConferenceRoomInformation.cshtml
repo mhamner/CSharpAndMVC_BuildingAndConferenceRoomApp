@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CSharpMVC_BuildingAndConferenceRoomAppAssignment.ViewModels.ViewConferenceRoomInformationViewModel>
+
+@{
+    ViewBag.Title = "ViewConferenceRoomInformation";
+}
+
+<h2>Conference Room Information</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomBuilding)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomIsAVCapable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCapacity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomBuilding)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomIsAVCapable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCapacity)
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Main Menu", "Index", "Home")
+</div>

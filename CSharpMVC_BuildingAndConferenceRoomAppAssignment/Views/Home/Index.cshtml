@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Building and Conference Room Information</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Main Menu</h2>
+        <p>@Html.ActionLink("View Building Information", "ViewBuildingInformation", "BuildingInformation")</p>
+        <p>@Html.ActionLink("View Conference Room Information", "ViewConferenceRoomInformation", "ConferenceRoomInformation")</p>
+        <p>@Html.ActionLink("Enter New Building Information", "EnterBuildingInformation", "BuildingInformation")</p>
+        <p>@Html.ActionLink("Enter New Conference Room Information", "EnterConferenceRoomInformation", "ConferenceRoomInformation")</p>
+    </div>
+</div>
